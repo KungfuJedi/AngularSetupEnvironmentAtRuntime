@@ -11,3 +11,7 @@ Asset replacements in the `angular.json` are used to handle dynamically changing
 	- `npm run ng serve -- -c production`
 	- `npm run ng serve -- -c uat`
 - The page should show the environment file defined per environment on the page, and if you check the network tab of your browser, you will see that it is always just loading the file from `/appSettings/appSettings.json`
+
+## Deployed versions
+- [Prod build](https://rhys-angular-deployment-prod.s3.ap-southeast-2.amazonaws.com/index.html)
+- [UAT build](https://rhys-angular-deployment-uat.s3.ap-southeast-2.amazonaws.com/index.html)

@@ -1,0 +1,22 @@
+name: Angular
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-angular:
+    name: Build-Angular
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '13.x'
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: ap-southeast-2
+      - run: ./build-and-deploy-angular.sh
